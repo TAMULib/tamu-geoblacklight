@@ -20,13 +20,13 @@ test:
   <<: *default
   database: db/test.sqlite3
 
-  production:
-    adapter:  <%= ENV['DATABASE_ADAPTER'] || "postgresql" %>
-    encoding: <%= ENV['DATABASE_ENCODING'] || "unicode" %>
-    database: <%= ENV['DATABASE_NAME'] || "blacklight" %>
-    pool:     <%= ENV['DATABASE_POOL'] || 5 %>
-    username: <%= ENV['DATABASE_USERNAME'] || "blacklight" %>
-    password: <%= ENV['DATABASE_PASSWORD'] || "blacklight" %>
-    host:     <%= ENV['DATABASE_HOST'] || "localhost" %>
-    port:     <%= ENV['DATABASE_PORT'] || 5432 %>
-    ssl:      <%= ENV['DATABASE_SSL'] || "disable" %>
+production:
+  adapter:  <%= ENV['DATABASE_ADAPTER'] || "postgresql" %>
+  encoding: <%= ENV['DATABASE_ENCODING'] || "unicode" %>
+  database: <%= ENV['DATABASE_NAME'] || "blacklight" %>
+  pool:     <%= ENV['DATABASE_POOL'] || 5 %>
+  username: <%= ENV['DATABASE_USERNAME'] || "blacklight" %>
+  password: <%= ENV['DATABASE_PASSWORD'] || "blacklight" %>
+  host:     <%= ENV['DATABASE_HOST'] || "localhost" %>
+  port:     <%= ENV['DATABASE_PORT'] || 5432 %>
+  ssl:      <%= ENV['DATABASE_SSL'] || "disable" %>
